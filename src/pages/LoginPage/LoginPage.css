@@ -1,0 +1,9 @@
+.header {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.loginLogo {
+    display: block;
+    height: 40vh;
+    margin: auto;
+}
