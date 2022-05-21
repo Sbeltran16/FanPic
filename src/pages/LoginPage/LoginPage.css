@@ -2,8 +2,9 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-.loginLogo {
+.logo{
     display: block;
-    height: 40vh;
     margin: auto;
+    height: 100vh;
+    width: 20vw;
 }

@@ -51,9 +51,9 @@ export default function LoginPage(props) {
         verticalAlign="middle"
       >
         <Grid.Column style={{ maxWidth: 450 }}>
+        <Image class="logo" src="https://github.com/Sbeltran16/FanPic/blob/main/public/FanPicLogo1.png?raw=true" />
           <Header class="header" as="h2" color="orange" textAlign="center">
-            <Image class="loginLogo" src="public/FanPicLogo1" /> Log-in to your
-            account
+           Log-in to your Account
           </Header>
           <Form autoComplete="off" onSubmit={handleSubmit}>
             <Segment stacked>
@@ -74,7 +74,7 @@ export default function LoginPage(props) {
                 required
               />
               <Button
-                color="teal"
+                color="orange"
                 fluid
                 size="large"
                 type="submit"
@@ -84,9 +84,7 @@ export default function LoginPage(props) {
               </Button>
             </Segment>
           </Form>
-          <Message>
             New to us? <Link to="/signup">Sign Up</Link>
-          </Message>
           {error ? <ErrorMessage error={error} /> : null}
         </Grid.Column>
       </Grid>
