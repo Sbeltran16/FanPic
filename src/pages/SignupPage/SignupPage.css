@@ -1,0 +1,10 @@
+.logo{
+    display: block;
+    margin: auto;
+    height: 100vh;
+    width: 20vw;
+}
+
+body {
+    background-color: whitesmoke;
+}

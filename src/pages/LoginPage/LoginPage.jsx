@@ -51,7 +51,7 @@ export default function LoginPage(props) {
         verticalAlign="middle"
       >
         <Grid.Column style={{ maxWidth: 450 }}>
-        <Image class="logo" src="https://github.com/Sbeltran16/FanPic/blob/main/public/FanPicLogo1.png?raw=true" />
+        <Image class="logo" src="https://raw.githubusercontent.com/Sbeltran16/FanPic/main/public/FanPicLogo1.png" />
           <Header class="header" as="h2" color="orange" textAlign="center">
            Log-in to your Account
           </Header>
