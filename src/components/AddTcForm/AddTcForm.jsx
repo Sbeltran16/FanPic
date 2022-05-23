@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { Button, Form, Grid, Segment } from 'semantic-ui-react'
 
-export default function AddPuppyForm(props){
+export default function AddTcForm(props){
   const [selectedFile, setSelectedFile] = useState('')
   const [state, setState] = useState({
     caption: ''
@@ -33,33 +33,33 @@ export default function AddPuppyForm(props){
 
 
   return (
-    
     <Grid textAlign='center' style={{ height: '25vh' }} verticalAlign='middle'>
       <Grid.Column style={{ maxWidth: 450 }}>
         <Segment>
         
             <Form  autoComplete="off" onSubmit={handleSubmit}>
             
+            <Form.Input
+                className="form-control"
+                type="file"
+                name="photo"
+                placeholder="Upload Trading-Card/Collectable"
+                onChange={handleFileInput}
+              /> 
               <Form.Input
                   className="form-control"
                   name="caption"
                   value={state.caption}
-                  placeholder="What's on your pups mind?"
+                  placeholder="Trading-Card/Collectable Info?"
                   onChange={handleChange}
                   required
               />   
-              <Form.Input
-                className="form-control"
-                type="file"
-                name="photo"
-                placeholder="upload image"
-                onChange={handleFileInput}
-              />   
+                
               <Button
                 type="submit"
                 className="btn"
               >
-                ADD PUPPY
+                Add Trading Card/ Collectable
               </Button>
             </Form>
           </Segment>
