@@ -34,7 +34,7 @@ export default function AddTcForm(props){
 
   return (
     <Grid textAlign='center' style={{ height: '25vh' }} verticalAlign='middle'>
-      <Grid.Column style={{ maxWidth: 450 }}>
+      <Grid.Column style={{ maxWidth: 450}}>
         <Segment>
         
             <Form  autoComplete="off" onSubmit={handleSubmit}>

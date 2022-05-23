@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Grid } from "semantic-ui-react";
 import PageHeader from "../../components/Header/Header";
 import Loading from "../../components/Loader/Loader";
@@ -116,13 +116,13 @@ export default function ProfilePage(props) {
           <Bio user={user} />
         </Grid.Column>
       </Grid.Row>
-      <Grid.Row>
-        <Grid.Column>
-          <Tabs />
+      <Grid.Row verticalAlign='middle' style={{maxHeight: 500}}>
+        <Grid.Column style={{ maxWidth: 1250}}>
+          <AddTcForm handleAddPost={handleAddPost} />
         </Grid.Column>
       </Grid.Row>
       <Grid.Row centered>
-        <Grid.Column style={{ maxWidth: 750 }}>
+        <Grid.Column style={{ maxWidth: 1050 }}>
         <PostGallery
             isProfile={true}
             posts={posts}
@@ -132,11 +132,6 @@ export default function ProfilePage(props) {
             removeLike={removeLike}
           />
         </Grid.Column>
-      </Grid.Row>
-      <Grid.Row style={{ textAlign: 'center'}}>
-      <Grid.Column style={{ maxWidth: 450 }}>
-          <AddTcForm handleAddPost={handleAddPost} />
-      </Grid.Column>
       </Grid.Row>
     </Grid>
   );

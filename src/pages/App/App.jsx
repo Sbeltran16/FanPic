@@ -3,6 +3,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
+import AboutPage from '../AboutPage/AboutPage';
 import userService from '../../utils/userService';
 import FrontPage from '../FrontPage/FrontPage'; 
 import ProfilePage from '../ProfilePage/ProfilePage';
@@ -35,6 +36,10 @@ function App() {
         path="/signup"
         element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
       />
+      <Route 
+        path="/about"
+        element={<AboutPage />}
+      />
       <Route path="/:username" element={<ProfilePage user={user} handleLogout={handleLogout}  />} />
     </Routes>
     )
@@ -49,6 +54,10 @@ function App() {
       <Route
         path="/signup"
         element={<SignupPage handleSignUpOrLogin={handleSignUpOrLogin} />}
+      />
+      <Route 
+        path="/about"
+        element={<AboutPage />}
       />
       <Route path="/*" element={<Navigate to="/login" />} />
     </Routes>
