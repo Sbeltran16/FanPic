@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Grid } from "semantic-ui-react";
-import PageHeader from "../../components/Header/Header";
+import PageHeader from "../../components/Navbar/Navbar";
 import Loading from "../../components/Loader/Loader";
 import Bio from "../../components/Bio/Bio";
 import Tabs from "../../components/Tabs/Tabs"
@@ -105,6 +105,7 @@ export default function ProfilePage(props) {
   }
 
   return (
+    <>
     <Grid>
       <Grid.Row>
         <Grid.Column>
@@ -113,12 +114,7 @@ export default function ProfilePage(props) {
       </Grid.Row>
       <Grid.Row>
         <Grid.Column>
-          <Bio user={user} />
-        </Grid.Column>
-      </Grid.Row>
-      <Grid.Row verticalAlign='middle' style={{maxHeight: 500}}>
-        <Grid.Column style={{ maxWidth: 1250}}>
-          <AddTcForm handleAddPost={handleAddPost} />
+          <Bio user={user}/>
         </Grid.Column>
       </Grid.Row>
       <Grid.Row centered>
@@ -134,6 +130,8 @@ export default function ProfilePage(props) {
         </Grid.Column>
       </Grid.Row>
     </Grid>
+    <AddTcForm handleAddPost={handleAddPost} />
+    </>
   );
 }
 
