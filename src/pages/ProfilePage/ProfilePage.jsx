@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Grid } from "semantic-ui-react";
-import PageHeader from "../../components/Navbar/Navbar";
+import PageHeader from "../../components/Header/Header";
 import Loading from "../../components/Loader/Loader";
 import Bio from "../../components/Bio/Bio";
-import Tabs from "../../components/Tabs/Tabs"
+import Menu from "../../components/Menu/Menu"
 import PostGallery from "../../components/PostGallery/PostGallery";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import userService from "../../utils/userService";
@@ -13,14 +13,12 @@ import { useParams } from "react-router-dom";
 import AddTcForm from "../../components/AddTcForm/AddTcForm";
 
 
-
-
-
 export default function ProfilePage(props) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [user, setUser] = useState({});
   const [posts, setPosts] = useState([]);
+  // const [search, setSearch] = useState({});
   // We need to grab the username out of the url,
   const { username } = useParams();
 
@@ -106,17 +104,10 @@ export default function ProfilePage(props) {
 
   return (
     <>
+    <PageHeader handleLogout={props.handleLogout} user={props.user}/>
+    <Bio user={user}/>
+    <Menu />
     <Grid>
-      <Grid.Row>
-        <Grid.Column>
-          <PageHeader handleLogout={props.handleLogout} user={props.user}/>
-        </Grid.Column>
-      </Grid.Row>
-      <Grid.Row>
-        <Grid.Column>
-          <Bio user={user}/>
-        </Grid.Column>
-      </Grid.Row>
       <Grid.Row centered>
         <Grid.Column style={{ maxWidth: 1050 }}>
         <PostGallery

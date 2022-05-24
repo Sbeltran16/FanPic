@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../../components/Navbar/Navbar";
+import PageHeader from "../../components/Header/Header";
 import AddTcForm from "../../components/AddTcForm/AddTcForm";
 import PostGallery from "../../components/PostGallery/PostGallery";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
@@ -13,8 +13,9 @@ import { Grid } from "semantic-ui-react";
 export default function Feed({user, handleLogout}) {
   console.log(postsAPI, " <-- postsAPI")
   const [posts, setPosts] = useState([]); // <- likes are inside of the each post in the posts array
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
 
   async function addLike(postId){
     try {
@@ -84,7 +85,7 @@ export default function Feed({user, handleLogout}) {
   if (error) {
     return (
       <>
-        {/* <PageHeader handleLogout={handleLogout} user={user}/> */}
+        <PageHeader handleLogout={handleLogout} user={user}/>
         <ErrorMessage error={error} />;
       </>
     );
@@ -93,7 +94,7 @@ export default function Feed({user, handleLogout}) {
   if (loading) {
     return (
       <>
-        {/* <PageHeader handleLogout={handleLogout} user={user}/> */}
+        <PageHeader handleLogout={handleLogout} user={user}/>
         <Loading />
       </>
     );
@@ -103,7 +104,12 @@ export default function Feed({user, handleLogout}) {
     <Grid centered>
       <Grid.Row>
         <Grid.Column>
-          {/* <PageHeader handleLogout={handleLogout} user={user}/> */}
+          <PageHeader handleLogout={handleLogout} user={user}/>
+        </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Grid.Column style={{ maxWidth: 450 }}>
+          <AddTcForm handleAddPost={handleAddPost} />
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
