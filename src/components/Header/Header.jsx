@@ -1,35 +1,35 @@
-import React from "react";
-import SearchBar from "../SearchBar/SearchBar";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Header, Segment, Image, Icon } from "semantic-ui-react";
+import {Icon} from "semantic-ui-react"
+import ".//Header.css";
 
-export default function PageHeader({ user, handleLogout, handleSearch }) {
-    console.log(user, 'user in header')
+export default function PageHeader({user, handleLogout}) {
+  const [openLinks, setOpenLinks] = useState(false);
+
+  const toggleNavbar = () => {
+    setOpenLinks(!openLinks);
+  };
   return (
-    <>
-    <Segment clearing>
-      <Header as="h2" floated="right">
-        <Link to="/">
-          <Icon name="home"></Icon>
-        </Link>
-        <Link to="" onClick={handleLogout}>
-          Logout
-        </Link>
-      </Header>
-      <Header as="h2" floated="left">
-        <Link to={`/${user?.username}`}>
-          <Image
-            src={
-              user?.photoUrl
-                ? user?.photoUrl
-                : "https://react.semantic-ui.com/images/wireframe/square-image.png"
-            }
-            avatar
-          ></Image>
-        </Link>
-        <SearchBar onChange={handleSearch} />
-      </Header> 
-    </Segment>
-    </>
+    <div className="navbar">
+      <div className="leftSide" id={openLinks ? "open" : "close"}>
+        <img src="" />
+        <div className="hiddenLinks">
+          <Link to="/"> Home </Link>
+          <Link to={`/${user?.username}`}> Account </Link>
+          <Link to="/about"> About </Link>
+          <Link to="" onClick={handleLogout}> Logout </Link>
+        </div>
+      </div>
+      <div className="rightSide">
+        <Link to="/"> Home </Link>
+        <Link to={`/${user?.username}`}> Account </Link>
+        <Link to="/about"> About </Link>
+        <Link to="" onClick={handleLogout}> Logout </Link>
+        <button onClick={toggleNavbar}>
+        <Icon name='th' size='large' />
+        </button>
+      </div>
+    </div>
   );
 }
+

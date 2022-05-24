@@ -3,7 +3,7 @@ import { Grid } from "semantic-ui-react";
 import PageHeader from "../../components/Header/Header";
 import Loading from "../../components/Loader/Loader";
 import Bio from "../../components/Bio/Bio";
-import Menu from "../../components/Menu/Menu"
+import Footer from "../../components/Footer/Footer";
 import PostGallery from "../../components/PostGallery/PostGallery";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import userService from "../../utils/userService";
@@ -106,7 +106,11 @@ export default function ProfilePage(props) {
     <>
     <PageHeader handleLogout={props.handleLogout} user={props.user}/>
     <Bio user={user}/>
-    <Menu />
+    <Grid.Row centered>
+        <Grid.Column style={{ maxWidth: 1050 }}>
+          <AddTcForm handleAddPost={handleAddPost} />
+        </Grid.Column>
+      </Grid.Row>
     <Grid>
       <Grid.Row centered>
         <Grid.Column style={{ maxWidth: 1050 }}>
@@ -120,8 +124,8 @@ export default function ProfilePage(props) {
           />
         </Grid.Column>
       </Grid.Row>
+      <Footer />
     </Grid>
-    <AddTcForm handleAddPost={handleAddPost} />
     </>
   );
 }

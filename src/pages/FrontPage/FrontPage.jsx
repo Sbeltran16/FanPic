@@ -1,130 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import PageHeader from "../../components/Header/Header";
-import AddTcForm from "../../components/AddTcForm/AddTcForm";
-import PostGallery from "../../components/PostGallery/PostGallery";
-import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
-import Loading from "../../components/Loader/Loader";
-import * as postsAPI from "../../utils/postApi";
-import * as likesAPI from '../../utils/likeApi';
-import { Grid } from "semantic-ui-react";
+import Footer from "../../components/Footer/Footer";
+import { Link } from "react-router-dom";
+import ".//FrontPage.css";
 
 
-
-export default function Feed({user, handleLogout}) {
-  console.log(postsAPI, " <-- postsAPI")
-  const [posts, setPosts] = useState([]); // <- likes are inside of the each post in the posts array
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-
-
-  async function addLike(postId){
-    try {
-      const data = await likesAPI.create(postId)
-      console.log(data, ' <- the response from the server when we make a like');
-      getPosts(); // <- to go get the updated posts with the like
-    } catch(err){
-      console.log(err)
-      setError(err.message)
-    }
-  }
-
-  async function removeLike(likeId){
-    try {
-      const data = await likesAPI.removeLike(likeId);
-      console.log(data, '<-  this is the response from the server when we remove a like')
-      getPosts()
-      
-    } catch(err){
-      console.log(err);
-      setError(err.message);
-    }
-  }
-
-
-
-  // C create in Crud
-  // we invoke this function in addPost component when the submit button on our form is clicked
-  // so we need to pass it as a prop
-  async function handleAddPost(post) {
-    try {
-      setLoading(true);
-      const data = await postsAPI.create(post); // our server is going to return
-      // the created post, that will be inside of data, which is the response from
-      // the server, we then want to set it in state
-      console.log(data, " this is response from the server, in handleAddPost");
-      setPosts([data.post, ...posts]);
-      setLoading(false);
-    } catch (err) {
-      console.log(err);
-      setError(err.message);
-    }
-  }
-
-  // R read in crud
-  async function getPosts() {
-    try {
-      const data = await postsAPI.getAll();
-      console.log(data, " this is data,");
-      setPosts([...data.posts]);
-      setLoading(false);
-    } catch (err) {
-      console.log(err.message, " this is the error");
-      setError(err.message);
-    }
-  }
-
-  // useEffect runs once
-  // the component is first rendered (whenever you first view the component)
-  // Component Lifecycle in react
-  useEffect(() => {
-    getPosts();
-  }, []);
-
-
-
-  if (error) {
-    return (
-      <>
-        <PageHeader handleLogout={handleLogout} user={user}/>
-        <ErrorMessage error={error} />;
-      </>
-    );
-  }
-
-  if (loading) {
-    return (
-      <>
-        <PageHeader handleLogout={handleLogout} user={user}/>
-        <Loading />
-      </>
-    );
-  } 
-
+export default function Home({user, handleLogout}) {
   return (
-    <Grid centered>
-      <Grid.Row>
-        <Grid.Column>
-          <PageHeader handleLogout={handleLogout} user={user}/>
-        </Grid.Column>
-      </Grid.Row>
-      <Grid.Row>
-        <Grid.Column style={{ maxWidth: 450 }}>
-          <AddTcForm handleAddPost={handleAddPost} />
-        </Grid.Column>
-      </Grid.Row>
-      <Grid.Row>
-        <Grid.Column style={{ maxWidth: 450 }}>
-          <PostGallery
-            posts={posts}
-            numPhotosCol={1}
-            isProfile={false}
-            loading={loading}
-            addLike={addLike}
-            removeLike={removeLike}
-            user={user}
-          />
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
+    <>
+    <PageHeader handleLogout={handleLogout} user={user}/>
+    <div className="home" style={{ backgroundImage: `url(https://pa1.narvii.com/6541/6e12e5e680c4868819f225b135b2c3aa60d8531f_hq.gif)` }}>
+      <div className="headerContainer">
+        <h1> FanPic </h1><br/><br/>
+        <p> Where Memories Are Stored!</p>
+        <Link to={`/${user?.username}`}>
+          <button> Start Adding Collection </button>
+        </Link>
+      </div>
+    </div>
+    <Footer />
+    </>
   );
 }
+
