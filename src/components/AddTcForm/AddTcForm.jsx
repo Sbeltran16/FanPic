@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-
 import { Button, Form, Grid, Segment } from 'semantic-ui-react'
+import ".//AddTcForm.css"
 
 export default function AddTcForm(props){
   const [selectedFile, setSelectedFile] = useState('')
@@ -34,7 +34,7 @@ export default function AddTcForm(props){
 
   return (
     <Grid textAlign='center' style={{ height: '25vh' }} verticalAlign='middle'>
-      <Grid.Column style={{ maxWidth: 450}}>
+      <Grid.Column style={{ maxWidth: 350}}>
         <Segment>
         
             <Form  autoComplete="off" onSubmit={handleSubmit}>
@@ -59,7 +59,7 @@ export default function AddTcForm(props){
                 type="submit"
                 className="btn"
               >
-                Add Trading Card/ Collectable
+                Add to Collection!
               </Button>
             </Form>
           </Segment>

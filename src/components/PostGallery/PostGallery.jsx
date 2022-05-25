@@ -18,6 +18,7 @@ export default function PostFeed({posts, numPhotosCol, isProfile, loading, addLi
         {posts.map((post) => {
           return (
             <PostCard
+              color='teal'
               post={post}
               key={post._id}
               isProfile={isProfile}

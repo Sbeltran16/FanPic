@@ -16,7 +16,6 @@ export default function PageHeader({user, handleLogout}) {
     <div className="navbar">
       <div class="pageName">FanPic</div>
       <div className="leftSide" id={openLinks ? "open" : "close"}>
-      <SearchBar />
         <div className="hiddenLinks">
           <Link to="/"> Home </Link>
           <Link to={`/${user?.username}`}> Account </Link>

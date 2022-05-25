@@ -4,6 +4,7 @@ import './App.css';
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import AboutPage from '../AboutPage/AboutPage';
+import PopularPage from '../PopularPage/PopularPage';
 import userService from '../../utils/userService';
 import FrontPage from '../FrontPage/FrontPage'; 
 import ProfilePage from '../ProfilePage/ProfilePage';
@@ -40,8 +41,18 @@ function App() {
         path="/about"
         element={<AboutPage />}
       />
-      <Route path="/:username" element={<ProfilePage user={user} handleLogout={handleLogout}  />} />
+      <Route 
+      path="/:username" 
+      element={<ProfilePage 
+      user={user} 
+      handleLogout={handleLogout} />} 
+      />
+      <Route 
+      path="/Popular" 
+      element={<PopularPage />} 
+      />
     </Routes>
+      
     )
   }
 
