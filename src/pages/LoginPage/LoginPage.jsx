@@ -76,7 +76,7 @@ export default function LoginPage(props) {
                 required
               />
               <Button
-                color="orange"
+                color="blue"
                 fluid
                 size="large"
                 type="submit"

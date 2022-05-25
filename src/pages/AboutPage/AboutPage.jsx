@@ -7,8 +7,13 @@ import ".//About.css"
     return (
         <>
         <PageHeader handleLogout={handleLogout} user={user}/>
-        <div className="about">
-            <h1>About Page</h1>
+        <div className="about" style={{ backgroundImage: `url(https://wallup.net/wp-content/uploads/2017/11/17/243026-vinyl-record_players-music.jpg)` }}>
+          <div className="headerContainer">
+            <h1> About </h1>
+          </div>
+          <div>
+              
+          </div>
         </div>
         <Footer />
         </>

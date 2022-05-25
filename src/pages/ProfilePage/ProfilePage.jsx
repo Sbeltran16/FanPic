@@ -11,6 +11,8 @@ import * as likesAPI from '../../utils/likeApi';
 import * as postsAPI from "../../utils/postApi";
 import { useParams } from "react-router-dom";
 import AddTcForm from "../../components/AddTcForm/AddTcForm";
+import SearchBar from "../../components/SearchBar/SearchBar";
+
 
 
 
@@ -19,10 +21,19 @@ export default function ProfilePage(props) {
   const [error, setError] = useState("");
   const [user, setUser] = useState({});
   const [posts, setPosts] = useState([]);
-  // const [search, setSearch] = useState({});
+  const [postSearch, setPostSearch] = useState("");
+  const [postData, setPostData] = useState({});
+
   // We need to grab the username out of the url,
   const { username } = useParams();
 
+  if (postSearch === " "){
+    setPostSearch("");
+  }
+
+  useEffect(() => {
+     
+  }, [])
 
   async function addLike(postId){
     try {

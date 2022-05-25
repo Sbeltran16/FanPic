@@ -21,6 +21,8 @@
   .pageName {
       color: white; 
       font-size: 35px;
+      display: block;
+      margin: 10px;
   }
   
   .navbar .rightSide {

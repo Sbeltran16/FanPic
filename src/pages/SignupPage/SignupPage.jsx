@@ -76,7 +76,7 @@ export default function SignUpPage(props) {
     </div>
     <Grid textAlign="center"  verticalAlign="middle">
       <Grid.Column style={{ maxWidth: 450 }}>
-        <Header as="h2" color="orange" textAlign="center">
+        <Header as="h2" color="grey" textAlign="center">
         Sign Up
         </Header>
         <Form autoComplete="off" onSubmit={handleSubmit}>
@@ -126,8 +126,8 @@ export default function SignUpPage(props) {
                 onChange={handleFileInput}
               />
             </Form.Field>
-            <Button type="submit" className="btn" color="orange">
-              Signup Now!
+            <Button type="submit" className="btn" color="blue">
+              Signup
             </Button>
           </Segment>
           Already Have an Account? <Link to="/login">Log In</Link>

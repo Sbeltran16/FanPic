@@ -1,17 +1,20 @@
-import React, { useRef, }from 'react'
+import React, { useState }from 'react'
 import { Input } from 'semantic-ui-react'
 
-export default function SearchBar() {
-    // const query = useRef();
+export default function SearchBar(props) {
+    const [postSearch, setPostSearch] = useState([]);
 
-    // const handleSearch = (e) => {
-    //     e.preventDefault();
-    //     const queryVal = query.current.val;
-    // }
+    function handleChange(e){
+        setPostSearch(e.target.value);
+    }
 
+    function handleSearchSubmit(e){
+        e.preventDefault();
+        props.handleSearchSubmit(postSearch);
+    }
   return (
     <>
-    <Input action={{ icon: 'users' }} placeholder='Search for users'/>
+    <Input action={{ icon: 'search' }} placeholder='Search' autoComplete="off" value={postSearch} onChange={handleChange}/>
     </>
   )
 }
