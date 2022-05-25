@@ -13,6 +13,7 @@ import { useParams } from "react-router-dom";
 import AddTcForm from "../../components/AddTcForm/AddTcForm";
 
 
+
 export default function ProfilePage(props) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -106,14 +107,9 @@ export default function ProfilePage(props) {
     <>
     <PageHeader handleLogout={props.handleLogout} user={props.user}/>
     <Bio user={user}/>
-    <Grid.Row centered>
-        <Grid.Column style={{ maxWidth: 1050 }}>
-          <AddTcForm handleAddPost={handleAddPost} />
-        </Grid.Column>
-      </Grid.Row>
     <Grid>
       <Grid.Row centered>
-        <Grid.Column style={{ maxWidth: 1050 }}>
+        <Grid.Column style={{ maxWidth: 950 }}>
         <PostGallery
             isProfile={true}
             posts={posts}
@@ -124,8 +120,9 @@ export default function ProfilePage(props) {
           />
         </Grid.Column>
       </Grid.Row>
-      <Footer />
     </Grid>
+    <AddTcForm handleAddPost={handleAddPost} /><br/><br/><br/>
+    <Footer />
     </>
   );
 }

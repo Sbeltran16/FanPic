@@ -3,6 +3,8 @@ import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import { Button, Form, Grid, Header, Image, Segment, Icon } from 'semantic-ui-react'
 import userService from "../../utils/userService";
 import { useNavigate, Link } from "react-router-dom";
+import "./SignupPage.css"
+import Footer from "../../components/Footer/Footer";
 
 export default function SignUpPage(props) {
 
@@ -68,9 +70,12 @@ export default function SignUpPage(props) {
 
 
   return (
+    <>
+     <div>
+      <h1 class="title">FanPic</h1>
+    </div>
     <Grid textAlign="center"  verticalAlign="middle">
       <Grid.Column style={{ maxWidth: 450 }}>
-      <Image  src="https://raw.githubusercontent.com/Sbeltran16/FanPic/main/public/FanPicLogo1.png" /> 
         <Header as="h2" color="orange" textAlign="center">
         Sign Up
         </Header>
@@ -127,8 +132,10 @@ export default function SignUpPage(props) {
           </Segment>
           Already Have an Account? <Link to="/login">Log In</Link>
           {error ? <ErrorMessage error={error} /> : null}
+          <Footer />
         </Form>
       </Grid.Column>
     </Grid>
+    </>
   );
 }

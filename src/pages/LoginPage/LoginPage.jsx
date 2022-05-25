@@ -3,6 +3,7 @@ import "./LoginPage.css";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import userService from "../../utils/userService";
 import { useNavigate, Link } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 import {
   Button,
   Form,
@@ -45,14 +46,15 @@ export default function LoginPage(props) {
 
   return (
     <>
+    <div>
+      <h1 class="title">FanPic</h1>
+    </div>
       <Grid
         textAlign="center"
-        
         verticalAlign="middle"
       >
         <Grid.Column style={{ maxWidth: 450 }}>
-        <Image class="logo" src="https://raw.githubusercontent.com/Sbeltran16/FanPic/main/public/FanPicLogo1.png" />
-          <Header class="header" as="h2" color="orange" textAlign="center">
+          <Header class="header" as="h2" color="black" textAlign="center">
            Log-in to your Account
           </Header>
           <Form autoComplete="off" onSubmit={handleSubmit}>
@@ -86,6 +88,7 @@ export default function LoginPage(props) {
           </Form>
             New to us? <Link to="/signup">Sign Up</Link>
           {error ? <ErrorMessage error={error} /> : null}
+          <Footer />
         </Grid.Column>
       </Grid>
     </>
