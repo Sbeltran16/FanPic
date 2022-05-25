@@ -48,7 +48,7 @@ function App() {
       handleLogout={handleLogout} />} 
       />
       <Route 
-      path="/Popular" 
+      path="/popular" 
       element={<PopularPage />} 
       />
     </Routes>

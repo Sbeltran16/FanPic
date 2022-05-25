@@ -14,7 +14,10 @@ export default function Home({user, handleLogout}) {
         <h1> FanPic </h1><br/><br/>
         <p> Where Your Valuables Are Stored!!</p>
         <Link to={`/${user?.username}`}>
-          <button> Start Adding Collection </button>
+          <button> Start Adding Collection! </button>
+        </Link><br/><br/>
+        <Link to="/popular">
+          <button> Look At What's Popular! </button>
         </Link>
       </div>
     </div>
