@@ -6,10 +6,11 @@ const s3 = new S3();
 
 module.exports = {
     create,
+    // delete: deletePost,
     index
 }
 
-function create(req, res){
+async function create(req, res){
     try{
         const filePath = `${uuidv4()}/${req.file.originalname}`
         const params = {Bucket: process.env.BUCKET_NAME, Key: filePath, Body: req.file.buffer};
@@ -33,3 +34,10 @@ async function index(res, req){
         
     }
 }
+
+// function deletePost(req, res) {
+//     // DELETE FIRST BY CHIRP ID
+//     Post.findByIdAndDelete(req.params.id, function(err){
+//         res.redirect('/')
+//     })
+// }

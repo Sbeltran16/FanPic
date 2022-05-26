@@ -49,6 +49,9 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
           onClick={clickHandler}
         />
         {post.likes.length} Likes
+        {/* <form action={(`/${user.username}/<%= post._id %>?_method=DELETE`)} method="POST">
+              <button class="postButton" type="submit">Delete Collectable</button>
+            </form> */}
       </Card.Content>
     </Card>
   );

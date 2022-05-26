@@ -65,7 +65,7 @@ export default function ProfilePage(props) {
       setPosts(() => data.posts);
     } catch (err) {
       console.log(err);
-      setError("Profile Doesn't exists, CHECK YOUR TERMINAL FOR EXPRESS!");
+      setError("Profile Doesn't Exist");
     }
   }
 

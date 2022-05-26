@@ -5,6 +5,7 @@ import PageHeader from '../../components/Header/Header'
 import {Icon} from 'semantic-ui-react'
 import ".//PopularPage.css"
 
+
 export default function PopularPage({handleLogout, user}) {
   return (
       <>

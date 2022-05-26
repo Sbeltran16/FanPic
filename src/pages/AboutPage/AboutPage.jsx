@@ -14,7 +14,7 @@ import ".//About.css"
           </div><br/><br/><br/>
           <div>
           <Card>
-        <Image src="https://lh3.googleusercontent.com/A8AEu90wSk-9HLaSh96pRc_1JI0kiqx4AY9Q5YaeuKnEk7bQk-roDChQUZA7WnV0Y0xf5w=s85" wrapped ui={false} />
+        <Image src="https://media-exp1.licdn.com/dms/image/C5603AQHNVlW6-dZhIw/profile-displayphoto-shrink_800_800/0/1650471629578?e=1658966400&v=beta&t=j-Grk-4NBFd-Z4K_sTZmHA02oiN0WO4BTYt2_XTvIJY" wrapped ui={false} />
         <Card.Content>
         <Card.Header>Sergio</Card.Header>
         <Card.Meta>
