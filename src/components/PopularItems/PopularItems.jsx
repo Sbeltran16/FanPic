@@ -20,10 +20,7 @@ const PopularPage = () => (
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
+        <Rating />
       </Card.Content>
     </Card>
     <Card>
@@ -39,10 +36,7 @@ const PopularPage = () => (
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
+        <Rating />
       </Card.Content>
     </Card>
     <Card>
@@ -68,41 +62,29 @@ const PopularPage = () => (
         ui={false}
       />
       <Card.Content>
-        <Card.Header>Matthew</Card.Header>
-        <Card.Meta>
-          <span className="date">Joined in 2015</span>
-        </Card.Meta>
+        <Card.Header>Rainbow Pikachu VMax</Card.Header>
         <Card.Description>
-          Matthew is a musician living in Nashville.
+         <a href="https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/ss-series/swsh4/188/">Card Details</a>
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
+          <Rating />
       </Card.Content>
     </Card>
     <Card>
     <Image
-        src="https://m.media-amazon.com/images/I/81ai6zx6eXL._AC_SY879_.jpg"
+        src="https://assets.pokemon.com/assets/cms2/img/cards/web/SMP/SMP_EN_SM77.png"
         wrapped
         ui={false}
       />
       <Card.Content>
-        <Card.Header>Matthew</Card.Header>
-        <Card.Meta>
-          <span className="date">Joined in 2015</span>
-        </Card.Meta>
+        <Card.Header>Mewtwo</Card.Header>
         <Card.Description>
-          Matthew is a musician living in Nashville.
+          <a href="https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/sm-series/smp/SM77/">Card Details</a>
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
+       <Rating />
       </Card.Content>
     </Card>
   </Card.Group>

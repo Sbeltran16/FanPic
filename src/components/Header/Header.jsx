@@ -18,6 +18,7 @@ export default function PageHeader({user, handleLogout}) {
       <div className="leftSide" id={openLinks ? "open" : "close"}>
         <div className="hiddenLinks">
           <Link to="/"> Home </Link>
+          <Link to="/popular">Popular</Link>
           <Link to={`/${user?.username}`}> Account </Link>
           <Link to="/about"> About </Link>
           <Link to="" onClick={handleLogout}> Logout </Link>
@@ -25,6 +26,7 @@ export default function PageHeader({user, handleLogout}) {
       </div>
       <div className="rightSide">
         <Link to="/"><Icon name='home' size='large' />Home</Link>
+        <Link to="/popular"><Icon name='fire' size='large' />Popular</Link>
         <Link to={`/${user?.username}`}> <Icon name='user' size='large' />Account </Link>
         <Link to="/about"><Icon name='info' size='large' />About</Link>
         <Link to="" onClick={handleLogout}> <Icon name='logout' size='large' />Logout</Link>

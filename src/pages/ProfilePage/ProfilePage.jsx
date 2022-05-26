@@ -14,8 +14,6 @@ import AddTcForm from "../../components/AddTcForm/AddTcForm";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
 
-
-
 export default function ProfilePage(props) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
