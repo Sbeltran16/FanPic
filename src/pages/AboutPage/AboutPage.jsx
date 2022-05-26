@@ -8,7 +8,7 @@ import ".//About.css"
     return (
         <>
         <PageHeader handleLogout={handleLogout} user={user}/>
-        <div className="about" style={{ backgroundImage: `url(https://www.wallpaperup.com/uploads/wallpapers/2014/08/24/427857/cd2407732af4d5abab25e79a931ddd75-700.jpg)` }}>
+        <div className="about" style={{ backgroundImage: `url(https://i.pinimg.com/originals/9c/3b/44/9c3b447bc23141425bb3176b5986cde4.jpg)` }}>
           <div className="aboutContainer">
             <h1>Creator</h1>
           </div><br/><br/><br/>

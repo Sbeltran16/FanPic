@@ -39,7 +39,7 @@ function App() {
       />
       <Route 
         path="/about"
-        element={<AboutPage />}
+        element={<AboutPage user={user} handleLogout={handleLogout} />}
       />
       <Route 
       path="/:username" 
@@ -49,7 +49,10 @@ function App() {
       />
       <Route 
       path="/popular" 
-      element={<PopularPage />} 
+      element={<PopularPage 
+      user={user}
+      handleLogout={handleLogout} 
+      />} 
       />
     </Routes>
       

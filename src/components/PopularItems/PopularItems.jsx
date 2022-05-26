@@ -4,6 +4,7 @@ import Rating from "../Rating/Rating"
 import ".//PopularItems.css"
 
 const PopularPage = () => (
+
 <>
   <h2 className="pokemon"><a className="popLinks" href="https://www.pokemon.com/us/pokemon-tcg/">Pokemon</a></h2>
   <Card.Group itemsPerRow={5}>
@@ -97,41 +98,35 @@ const PopularPage = () => (
         ui={false}
       />
       <Card.Content>
-        <Card.Header>Matthew</Card.Header>
+        <Card.Header>Daft Punk "Random Access Memories"</Card.Header>
         <Card.Meta>
-          <span className="date">Joined in 2015</span>
+          <span>Price $25.99</span>
         </Card.Meta>
         <Card.Description>
-          Matthew is a musician living in Nashville.
+          <a href="https://genius.com/albums/Daft-punk/Random-access-memories">Album Details</a>
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
+        <Rating />
       </Card.Content>
     </Card>
     <Card>
     <Image
-        src="https://i.pinimg.com/originals/2b/b4/ee/2bb4ee4b7b3cbb4c2e8412360d9dc35f.jpg"
+        src="https://media.pitchfork.com/photos/627425dbc85171592b8a6e6a/1:1/w_600/Bad-Bunny-Un-Verano-Sin-Ti.jpg"
         wrapped
         ui={false}
       />
       <Card.Content>
-        <Card.Header>Matthew</Card.Header>
+        <Card.Header>Bad Bunny "Un Verano Sin Ti"</Card.Header>
         <Card.Meta>
-          <span className="date">Joined in 2015</span>
+          <span>Price $29.99</span>
         </Card.Meta>
         <Card.Description>
-          Matthew is a musician living in Nashville.
+          <a href="https://genius.com/albums/Bad-bunny/Un-verano-sin-ti">Album Details</a>
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
+        <Rating />
       </Card.Content>
     </Card>
     <Card>
@@ -150,10 +145,7 @@ const PopularPage = () => (
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
+        <Rating />
       </Card.Content>
     </Card>
     <Card>
@@ -163,154 +155,133 @@ const PopularPage = () => (
         ui={false}
       />
       <Card.Content>
-        <Card.Header>Matthew</Card.Header>
+        <Card.Header>Kendrick Lamar "Mr.Morale and The Big Steppers"</Card.Header>
         <Card.Meta>
-          <span className="date">Joined in 2015</span>
+          <span >Price $25.99</span>
         </Card.Meta>
         <Card.Description>
-          Matthew is a musician living in Nashville.
+          <a href="https://genius.com/albums/Kendrick-lamar/Mr-morale-the-big-steppers">Album Details</a>
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
+        <Rating />
       </Card.Content>
     </Card>
     <Card>
     <Image
-        src="https://m.media-amazon.com/images/I/81ai6zx6eXL._AC_SY879_.jpg"
+        src="https://i.discogs.com/4UWQYZUmkfB-ZARo9UGS9KDydlKKCmBSVRF7WknNd_0/rs:fit/g:sm/q:90/h:537/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTcyNTEy/MzEtMTYyMzU5NDE2/OS05NDgzLmpwZWc.jpeg"
         wrapped
         ui={false}
       />
       <Card.Content>
-        <Card.Header>Matthew</Card.Header>
+        <Card.Header>Tame Impala "Currents"</Card.Header>
         <Card.Meta>
-          <span className="date">Joined in 2015</span>
+          <span>Price $21.99</span>
         </Card.Meta>
         <Card.Description>
-          Matthew is a musician living in Nashville.
+          <a href="https://genius.com/albums/Tame-impala/Currents">Album Details</a>
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
+        <Rating />
       </Card.Content>
     </Card>
   </Card.Group>
-  <h2 className="Movies"><a className="popLinks" href="https://www.rottentomatoes.com">Movies</a></h2>
+  <h2 className="Movies"><a className="popLinks" href="https://www.gameinformer.com/">Video Games</a></h2>
   <Card.Group itemsPerRow={5}>
     <Card>
     <Image
-        src="https://www.the-numbers.com/images/movies/opusdata/Wonder-Woman-1984-(2020).jpg"
+        src="https://m.media-amazon.com/images/I/614Y4NA6CVL._AC_SY741_.jpg"
         wrapped
         ui={false}
       />
       <Card.Content>
-        <Card.Header>Matthew</Card.Header>
+        <Card.Header>Elden Ring</Card.Header>
         <Card.Meta>
-          <span className="date">Joined in 2015</span>
+          <span>Release Date: February 25, 2022</span>
         </Card.Meta>
         <Card.Description>
-          Matthew is a musician living in Nashville.
+          <a href="https://www.imdb.com/title/tt10562854/?ref_=nv_sr_srsg_0">Game Details</a>
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
+        <Rating />
       </Card.Content>
     </Card>
     <Card>
     <Image
-        src="https://www.themoviedb.org/t/p/original/9ltcubNi8RaTirTjW0ZAOgmUb9v.jpg"
+        src="https://image.api.playstation.com/vulcan/img/rnd/202010/2618/Y02ljdBodKFBiziorYgqftLE.png"
         wrapped
         ui={false}
       />
       <Card.Content>
-        <Card.Header>Matthew</Card.Header>
+        <Card.Header>Last of Us Part II</Card.Header>
         <Card.Meta>
-          <span className="date">Joined in 2015</span>
+          <span >Release Date: June 19, 2020</span>
         </Card.Meta>
         <Card.Description>
-          Matthew is a musician living in Nashville.
+          <a href="https://www.imdb.com/title/tt6298000/?ref_=nv_sr_srsg_0">Game Details</a>
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
+        <Rating />
       </Card.Content>
     </Card>
     <Card>
     <Image
-        src="https://www.the-numbers.com/images/movies/opusdata/Fast-and-Furious-9-(2020).jpg"
+        src="https://ih1.redbubble.net/image.1497699451.5504/flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
         wrapped
         ui={false}
       />
       <Card.Content>
-        <Card.Header>Matthew</Card.Header>
+        <Card.Header>Horizon Forbidden West</Card.Header>
         <Card.Meta>
-          <span className="date">Joined in 2015</span>
+          <span>Release Date: February 18, 2022</span>
         </Card.Meta>
         <Card.Description>
-          Matthew is a musician living in Nashville.
+          <a href="https://www.imdb.com/title/tt12496904/?ref_=nv_sr_srsg_0" >Game Details</a>
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
+        <Rating />
       </Card.Content>
     </Card>
     <Card>
     <Image
-        src="https://m.media-amazon.com/images/I/81ai6zx6eXL._AC_SY879_.jpg"
+        src="https://www.denofgeek.com/wp-content/uploads/2020/07/halo-infinite-box-art.png?w=805"
         wrapped
         ui={false}
       />
       <Card.Content>
-        <Card.Header>Matthew</Card.Header>
+        <Card.Header>Halo Infinte</Card.Header>
         <Card.Meta>
-          <span className="date">Joined in 2015</span>
+          <span>Release Date: November 15, 2021</span>
         </Card.Meta>
         <Card.Description>
-          Matthew is a musician living in Nashville.
+          <a href="https://www.imdb.com/title/tt9437014/?ref_=nv_sr_srsg_0">Game Details</a>
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
+        <Rating />
       </Card.Content>
     </Card>
     <Card>
     <Image
-        src="https://m.media-amazon.com/images/I/81ai6zx6eXL._AC_SY879_.jpg"
+        src="https://store-images.s-microsoft.com/image/apps.7883.13835473807186336.304a128a-7199-43c4-a9ce-2fc111ee9ddb.3d22c924-790c-42af-a8ef-d451ba6467a7"
         wrapped
         ui={false}
       />
       <Card.Content>
-        <Card.Header>Matthew</Card.Header>
+        <Card.Header>Call of Duty Warzone</Card.Header>
         <Card.Meta>
-          <span className="date">Joined in 2015</span>
+          <span>Release Date: March 10, 2020</span>
         </Card.Meta>
         <Card.Description>
-          Matthew is a musician living in Nashville.
+          <a href="https://www.imdb.com/title/tt11957596/?ref_=nv_sr_srsg_0">Game Details</a>
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          22 Friends
-        </a>
+        <Rating />
       </Card.Content>
     </Card>
   </Card.Group>

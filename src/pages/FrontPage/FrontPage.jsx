@@ -9,7 +9,7 @@ export default function Home({user, handleLogout}) {
   return (
     <>
     <PageHeader handleLogout={handleLogout} user={user}/>
-    <div className="home" style={{ backgroundImage: `url(https://pa1.narvii.com/6541/6e12e5e680c4868819f225b135b2c3aa60d8531f_hq.gif)` }}>
+    <div className="home" style={{ backgroundImage: `url(http://78.media.tumblr.com/50d43db43843a7dc2fbb93c660a1d0dc/tumblr_ozar2dfRQI1rh3rypo1_1280.gif)` }}>
       <div className="headerContainer">
         <h1> FanPic </h1><br/><br/>
         <p> Where Your Valuables Are Stored!!</p>

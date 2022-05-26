@@ -118,7 +118,7 @@ export default function ProfilePage(props) {
     <Bio user={user}/>
     <Grid>
       <Grid.Row centered>
-        <Grid.Column style={{ maxWidth: 950 }}>
+        <Grid.Column style={{ maxWidth: 1050 }}>
         <PostGallery
             isProfile={true}
             posts={posts}
