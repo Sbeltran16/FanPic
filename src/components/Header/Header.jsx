@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Icon, Input} from "semantic-ui-react"
 import ".//Header.css";
-import SearchBar from "../SearchBar/SearchBar";
+
 
 
 export default function PageHeader({user, handleLogout}) {
@@ -11,7 +11,7 @@ export default function PageHeader({user, handleLogout}) {
   function toggleNavbar() {
     setOpenLinks(!openLinks);
   };
-
+  
   return (
     <div className="navbar">
       <div class="pageName">FanPic</div>

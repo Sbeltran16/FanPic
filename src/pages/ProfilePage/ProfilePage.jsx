@@ -11,7 +11,7 @@ import * as likesAPI from '../../utils/likeApi';
 import * as postsAPI from "../../utils/postApi";
 import { useParams } from "react-router-dom";
 import AddTcForm from "../../components/AddTcForm/AddTcForm";
-import SearchBar from "../../components/SearchBar/SearchBar";
+
 
 
 export default function ProfilePage(props) {
@@ -19,9 +19,8 @@ export default function ProfilePage(props) {
   const [error, setError] = useState("");
   const [user, setUser] = useState({});
   const [posts, setPosts] = useState([]);
-  const [postData, setPostData] = useState({});
+  
 
-  // We need to grab the username out of the url,
   const { username } = useParams();
 
   async function addLike(postId){
@@ -63,9 +62,7 @@ export default function ProfilePage(props) {
   async function handleAddPost(post) {
     try {
       setLoading(true);
-      const data = await postsAPI.create(post); // our server is going to return
-      // the created post, that will be inside of data, which is the response from
-      // the server, we then want to set it in state
+      const data = await postsAPI.create(post); 
       console.log(data, " this is response from the server, in handleAddPost");
       setPosts([data.post, ...posts]);
       setLoading(false);
@@ -90,16 +87,9 @@ export default function ProfilePage(props) {
     }  
   }
 
-
-  // then when the component loads we can use that username to fetch all the users data
-  // then we can store that in state
   useEffect(() => {
     getProfile();
   }, []);
-
-
-
-
 
   if (error) {
     return (

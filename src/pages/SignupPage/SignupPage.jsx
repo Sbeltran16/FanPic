@@ -68,6 +68,7 @@ export default function SignUpPage(props) {
     setSelectedFile(e.target.files[0]);
   }
 
+
   return (
     <>
      <div>

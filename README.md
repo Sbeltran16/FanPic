@@ -1,6 +1,7 @@
 ## App Title 
-Welcome to FanPic
-    -This is an app where you can store your your collectables/Trading Cards and upload them to your personal account.
+
+## Welcome to FanPic
+    This is an app where you can store your your collectables/Trading Cards and upload them to your personal account.
 
 ## Screenshots
 
