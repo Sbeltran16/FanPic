@@ -1,37 +1,52 @@
-## Setup 
+## App Title 
+Welcome to FanPic
+    -This is an app where you can store your your collectables/Trading Cards and upload them to your personal account.
 
-1. Clone the repo
-2. Rename the folder to your Project, you can use the `mv` command like `mv mern-boilerplate yourprojectname`
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+## Screenshots
+
+Wireframe
+
+<img width="781" alt="Screen Shot 2022-05-26 at 10 26 14 PM" src="https://user-images.githubusercontent.com/84055237/170637405-b3faa0c9-1c57-465c-ac64-cf82c555ab1a.png">
+
+Login Page/ Sign Up
+
+<img width="1280" alt="Screen Shot 2022-05-26 at 10 14 44 PM" src="https://user-images.githubusercontent.com/84055237/170636046-b150dac0-7c6a-4161-b2f8-b6e98020d8dd.png">
+
+<img width="1280" alt="Screen Shot 2022-05-26 at 10 15 11 PM" src="https://user-images.githubusercontent.com/84055237/170636120-a90a4858-d669-4ef7-a453-d31dd1f1aa1c.png">
+
+Home Page
+
+<img width="1280" alt="Screen Shot 2022-05-26 at 10 16 50 PM" src="https://user-images.githubusercontent.com/84055237/170636176-7b9d5a86-7523-42b8-ae95-29c89e73cb9b.png">
+
+Popular Page
+
+<img width="1280" alt="Screen Shot 2022-05-26 at 10 17 42 PM" src="https://user-images.githubusercontent.com/84055237/170636226-566640b2-290e-495e-8049-fb439d0289e9.png">
+
+Account Page
+
+<img width="1280" alt="Screen Shot 2022-05-26 at 10 18 02 PM" src="https://user-images.githubusercontent.com/84055237/170636296-2f71d472-8cde-4ee9-b65f-f05d44c31f28.png">
+
+## Technologies Used
+    -JavaScript
+    -CSS
+    -React
+    -Express
+    -Mongoose
+    -MongoDB
+    -AWS
+
+## Getting Started
+
+Link to FanPic: https://fanpic.herokuapp.com/login
+
+Trello Board: https://trello.com/b/5WYPzqui/fanpic
+
+## Next Steps
+
+-I would like to continue growing this app by adding ways for the use to have different sections and topics. This way the user has everything more orginized.
+
+-Adding a search function that allows the user to look up other users and look at their uploads.
 
 
-#### Setup your git repo
 
-1. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-2. Then you can run the following commands in the root of your project 
 
-```
-git init
-git add .
-git commit -m "first commit"
-git remote add origin git@git.generalassemb.ly:SEI-CC/test.git // this will be whatever your address will be, look at the address in the code github gives you!
-git push -u origin main
-```
-
-#### Setup the App
-
-```npm install```
-
-*DOTENV*
-
-`touch .env`
-
-add your variables
-
-```
-DATABASE_URL=mongodb://localhost:27017/testagramV2
-BUCKET_NAME=catcollectorone
-SECRET=mysecretforjwt
-```
-
-The app is configured, to use those respective key names for the database, jwt secret and aws bucket, of course you'll have your own values
