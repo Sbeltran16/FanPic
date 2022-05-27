@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Icon, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import ".//PostCard.css"
 
 
 function PostCard({ post, isProfile, removeLike, addLike, user, handleDeletePost }) {
@@ -49,8 +50,7 @@ function PostCard({ post, isProfile, removeLike, addLike, user, handleDeletePost
           onClick={clickHandler}
         />
         {post.likes.length} Likes
-        {/* <p>{post._id}</p> */}
-        <button type="submit" onClick={() => handleDeletePost(post._id)}>Delete Collectable</button>
+        <button className= "deleteBtn" type="submit" onClick={() => handleDeletePost(post._id)}>Delete Collectable</button>
       </Card.Content>
     </Card>
   );

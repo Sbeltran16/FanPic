@@ -57,7 +57,6 @@ export default function AddTcForm(props){
                 
               <Button
                 type="submit"
-                className="btn"
               >
                 Add to Collection!
               </Button>
