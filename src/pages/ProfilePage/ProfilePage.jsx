@@ -19,19 +19,10 @@ export default function ProfilePage(props) {
   const [error, setError] = useState("");
   const [user, setUser] = useState({});
   const [posts, setPosts] = useState([]);
-  const [postSearch, setPostSearch] = useState("");
   const [postData, setPostData] = useState({});
 
   // We need to grab the username out of the url,
   const { username } = useParams();
-
-  if (postSearch === " "){
-    setPostSearch("");
-  }
-
-  useEffect(() => {
-     
-  }, [])
 
   async function addLike(postId){
     try {
@@ -84,12 +75,28 @@ export default function ProfilePage(props) {
     }
   }
 
+  async function handleDeletePost(postId){
+    try{
+      setLoading(true);
+      const apiResponse = await postsAPI.deletePost(postId);
+      if(apiResponse.success){
+        const newPosts = posts.filter(post => post._id !== postId);
+        setPosts(newPosts)
+      }
+      setLoading(false);
+    }catch(err){
+      console.log(err);
+      setError(err.message);
+    }  
+  }
+
 
   // then when the component loads we can use that username to fetch all the users data
   // then we can store that in state
   useEffect(() => {
     getProfile();
   }, []);
+
 
 
 
@@ -126,6 +133,7 @@ export default function ProfilePage(props) {
             user={props.user}
             addLike={addLike}
             removeLike={removeLike}
+            handleDeletePost={handleDeletePost}
           />
         </Grid.Column>
       </Grid.Row>

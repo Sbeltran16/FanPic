@@ -3,7 +3,7 @@ import { Card, Icon, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 
-function PostCard({ post, isProfile, removeLike, addLike, user }) {
+function PostCard({ post, isProfile, removeLike, addLike, user, handleDeletePost }) {
 
   const likeIndex = post.likes.findIndex(
     (like) => like.username === user.username
@@ -49,9 +49,8 @@ function PostCard({ post, isProfile, removeLike, addLike, user }) {
           onClick={clickHandler}
         />
         {post.likes.length} Likes
-        {/* <form action={(`/${user.username}/<%= post._id %>?_method=DELETE`)} method="POST">
-              <button class="postButton" type="submit">Delete Collectable</button>
-            </form> */}
+        {/* <p>{post._id}</p> */}
+        <button type="submit" onClick={() => handleDeletePost(post._id)}>Delete Collectable</button>
       </Card.Content>
     </Card>
   );

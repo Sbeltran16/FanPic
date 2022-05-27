@@ -2,11 +2,12 @@ const Post = require('../models/post');
 const S3 = require('aws-sdk/clients/s3');
 const { v4: uuidv4 } = require('uuid');
 
+
 const s3 = new S3();
 
 module.exports = {
     create,
-    // delete: deletePost,
+    delete: deletePost,
     index
 }
 
@@ -35,9 +36,19 @@ async function index(res, req){
     }
 }
 
-// function deletePost(req, res) {
-//     // DELETE FIRST BY CHIRP ID
-//     Post.findByIdAndDelete(req.params.id, function(err){
-//         res.redirect('/')
-//     })
-// }
+async function deletePost(req, res) {
+    try{
+        s3.deleteObject({ Bucket: process.env.BUCKET_NAME, Key: req.params.id,}).promise()
+        const deletedPost = await Post.findByIdAndDelete(req.params.id);
+        res.send({
+            success: true,
+            data: deletedPost
+        })
+    }catch(err){
+        err.message = `post not found: ${req.params.id}`
+        res.send({
+            status: 500,
+            data: err.message
+        })
+    }
+}
